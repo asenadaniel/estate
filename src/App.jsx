@@ -9,6 +9,9 @@ import {
   Link,
   Outlet,
 } from "react-router-dom";
+import ListPage from './pages/ListPage/ListPage';
+import Login from './pages/Login/Login';
+import SinglePage from './pages/SinglePage/SinglePage';
 
 function App() {
 
@@ -29,6 +32,18 @@ function App() {
         {
           path: "/",
           element: <Home />
+        },
+        {
+          path: '/list',
+          element: <ListPage />,
+        },
+        {
+          path: '/:id',
+          element: <SinglePage />,
+        },
+        {
+          path: '/login',
+          element: <Login />,
         },
       ]
     }

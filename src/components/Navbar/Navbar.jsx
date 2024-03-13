@@ -22,14 +22,14 @@ function Navbar() {
         <div className='menu'>
           {open ? <Close className='img' onClick={() => setOpen(!open)} /> : <Menu onClick={() => setOpen(!open)} />}
         </div>
-        <div className={open ? 'Menu active' : 'Menu'}>
+        {open && <div className={open ? 'Menu active' : 'Menu'}>
           <a href="">Home</a>
           <a href="">About</a>
           <a href="">Agency</a>
           <a href="">Contact</a>
           <a href="">sign in</a>
           <a href="">sign up</a>
-        </div>
+        </div>}
       </div>
     </nav>
   )
